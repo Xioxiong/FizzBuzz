@@ -45,4 +45,63 @@ public class FizzBuzzTest {
         //then
         assertEquals(result,"Whizz");
     }
+    @Test
+    public void should_return_FizzBuzz_given_15_Buzz(){
+        //given
+        int num =15;
+        //when
+        String result = fizzBuzz.say(num);
+        //then
+        assertEquals(result,"FizzBuzz");
+    }
+
+    @Test
+    public void should_return_Fizz_given_13_Buzz(){
+        //given
+        int num =13;
+        //when
+        String result = fizzBuzz.say(num);
+        //then
+        assertEquals(result,"Fizz");
+    }
+    @Test
+    public void should_return_Fizz_given_21_FizzWhizz(){
+        //given
+        int num =21;
+        //when
+        String result = fizzBuzz.say(num);
+        //then
+        assertEquals(result,"FizzWhizz");
+    }
+    @Test
+    public void should_return_BuzzWhizz_given_70(){
+        //given
+        int num =70;
+        //when
+        String result = fizzBuzz.say(num);
+        //then
+        assertEquals(result,"BuzzWhizz");
+    }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_given_105(){
+        //given
+        int num =105;
+        //when
+        String result = fizzBuzz.say(num);
+        //then
+        assertEquals(result,"FizzBuzzWhizz");
+        assert (result.equals("FizzBuzzWhizz"));
+    }
+
+    @Test
+    public void should_return_Fizz_given_30(){
+        //given
+        int num =30;
+        //when
+        String result = fizzBuzz.say(num);
+        //then
+        assertEquals(result,"Fizz");
+        assert (result.equals("Fizz"));
+    }
 }
