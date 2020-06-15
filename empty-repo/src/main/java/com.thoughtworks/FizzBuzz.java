@@ -18,7 +18,6 @@ public class FizzBuzz {
 
         if (String.valueOf(number).contains("3")){
             result = "Fizz";
-            return result;
         }
         return result ;
     }
