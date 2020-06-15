@@ -17,5 +17,13 @@ public class FizzBuzzTest {
         //then
         assertEquals(result,"1");
     }
-    
+    @Test
+    public void should_return_Fizz_given_3(){
+        //given
+        int num =3;
+        //when
+        String result = fizzBuzz.say(num);
+        //then
+        assertEquals(result,"Fizz");
+    }
 }
