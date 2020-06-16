@@ -1,11 +1,12 @@
 package com.thoughtworks;
 
+import java.util.List;
+
 public class Execution {
 
-
-    public String move(String command,String direction) {
-        int x = 0;
-        int y = 0;
+    public String move(String command,String direction,int ax,int ay) {
+        int x = ax;
+        int y = ay;
         StringBuilder result = new StringBuilder();
         String ort = direction;
 
@@ -46,10 +47,24 @@ public class Execution {
             }
         }
         result.append(x);
+        result.append(",");
         result.append(y);
+        result.append(",");
         result.append(ort);
         return result.toString();
     }
-
-
+    public String mutilConnand(List<String> list, String direction){
+        String result = "";
+        int x = 0;
+        int y = 0;
+        String ort = direction;
+        for(String i:list){
+           result= move(i,ort,x,y);
+           String a[] = result.split(",");
+           x = Integer.valueOf(a[0]);
+           y = Integer.valueOf(a[1]);
+           ort = a[2];
+        }
+        return result;
+    }
 }
