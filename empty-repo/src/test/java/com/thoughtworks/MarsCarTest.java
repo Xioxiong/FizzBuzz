@@ -40,4 +40,15 @@ public class MarsCarTest {
         //then
         assertEquals(result,"00E");
     }
+
+    @Test
+    public void should_return_0_negavite_1_N_when_init_S_given_M() {
+        //given
+        String commend = "M";
+        String direction = "S";
+        //when
+        String result = execution.move(commend,direction);
+        //then
+        assertEquals(result,"0-1S");
+    }
 }

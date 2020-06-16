@@ -15,6 +15,15 @@ public class Execution {
                 direction = "E";
             }
         }
+        if("S".equals(direction)){
+            if("M".equals(command)){
+                y -= 1;
+            }else if("L".equals(command)){
+                direction = "E";
+            }else {
+                direction = "W";
+            }
+        }
         result.append(x);
         result.append(y);
         result.append(direction);
