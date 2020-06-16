@@ -84,4 +84,15 @@ public class MarsCarTest {
         //then
         assertEquals(result,"-10W");
     }
+
+    @Test
+    public void should_return_negative_0_0_S_when_init_W_given_L() {
+        //given
+        String commend = "L";
+        String direction = "W";
+        //when
+        String result = execution.move(commend,direction);
+        //then
+        assertEquals(result,"00S");
+    }
 }
