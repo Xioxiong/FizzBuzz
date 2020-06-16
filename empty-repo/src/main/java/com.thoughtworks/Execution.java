@@ -24,6 +24,16 @@ public class Execution {
                 direction = "W";
             }
         }
+        if("W".equals(direction)){
+            if ("M".equals(command)) {
+                x -=1;
+            }else if("L".equals(command)){
+                direction = "S";
+            }else {
+                direction = "N";
+            }
+        }
+
         result.append(x);
         result.append(y);
         result.append(direction);
