@@ -117,4 +117,15 @@ public class MarsCarTest {
         //then
         assertEquals(result,"10E");
     }
+
+    @Test
+    public void should_return_0_0_N_when_init_E_given_L() {
+        //given
+        String commend = "L";
+        String direction = "E";
+        //when
+        String result = execution.move(commend,direction);
+        //then
+        assertEquals(result,"00N");
+    }
 }
