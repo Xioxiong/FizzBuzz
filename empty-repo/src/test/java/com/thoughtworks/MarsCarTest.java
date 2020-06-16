@@ -42,7 +42,7 @@ public class MarsCarTest {
     }
 
     @Test
-    public void should_return_0_negavite_1_N_when_init_S_given_M() {
+    public void should_return_0_negavite_1_S_when_init_S_given_M() {
         //given
         String commend = "M";
         String direction = "S";
@@ -50,5 +50,16 @@ public class MarsCarTest {
         String result = execution.move(commend,direction);
         //then
         assertEquals(result,"0-1S");
+    }
+
+    @Test
+    public void should_return_0_negavite_1_S_when_init_S_given_L() {
+        //given
+        String commend = "L";
+        String direction = "S";
+        //when
+        String result = execution.move(commend,direction);
+        //then
+        assertEquals(result,"00E");
     }
 }
