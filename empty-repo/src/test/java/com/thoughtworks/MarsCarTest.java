@@ -86,7 +86,7 @@ public class MarsCarTest {
     }
 
     @Test
-    public void should_return_negative_0_0_S_when_init_W_given_L() {
+    public void should_return_0_0_S_when_init_W_given_L() {
         //given
         String commend = "L";
         String direction = "W";
@@ -94,5 +94,16 @@ public class MarsCarTest {
         String result = execution.move(commend,direction);
         //then
         assertEquals(result,"00S");
+    }
+
+    @Test
+    public void should_return_0_0_N_when_init_W_given_R() {
+        //given
+        String commend = "R";
+        String direction = "W";
+        //when
+        String result = execution.move(commend,direction);
+        //then
+        assertEquals(result,"00N");
     }
 }
